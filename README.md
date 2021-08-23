@@ -27,7 +27,7 @@ It is a simple Python web application, that shows current time in Moscow.
 ```
 git clone https://github.com/zavideeva/devops.git
 ```
-2. Run docker-compose file
+2. Run docker-compose file from folder app_python
 
 ```
 docker-compose up --build
