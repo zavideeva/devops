@@ -7,4 +7,5 @@ The best practices that I used:
 2. Gunicorn - a Python WSGI HTTP Server for UNIX, that is used for my app on production stage.
 3. .gitignore file
 4. requirements.txt file to provide all dependences that are used
-5. linter pylint (got score 10/10)
+5. Using popular linter pylint (got score 10/10)
+6. Using Docker containers to containerize app
