@@ -9,4 +9,4 @@ COPY . .
 
 USER myuser
 
-ENTRYPOINT [ "gunicorn", "-b 0.0.0.0:8000", "main:APP" ]
+ENTRYPOINT [ "gunicorn", "-b 0.0.0.0:8000", "main:app" ]
