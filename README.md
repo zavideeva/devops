@@ -1,3 +1,4 @@
+[![CI](https://github.com/zavideeva/devops/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/zavideeva/devops/actions/workflows/main.yml)
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
