@@ -2,14 +2,14 @@
 Running flask application, that shows curent time in Moskow
 """
 from datetime import datetime
-from flask import Flask,Response
+from flask import Flask 
 import pytz
 
 app = Flask(__name__)
 MSK = pytz.timezone('Europe/Moscow')
 
 
-@app.route("/" )
+@app.route("/")
 def time_in_msk():
     """Show current time in Moskow"""
     return datetime.now(MSK).strftime('%H:%M:%S'), 200
