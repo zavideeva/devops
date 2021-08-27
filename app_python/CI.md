@@ -4,3 +4,4 @@
 3. Using caching mechanism
 4. Limit environment variables to the narrowest possible scope
 5. Not using self-hosted runners in a public repository
+6. Automate all processes: include tesing, linter, push image to dockerhub
