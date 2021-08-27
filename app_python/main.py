@@ -2,7 +2,7 @@
 Running flask application, that shows curent time in Moskow
 """
 from datetime import datetime
-from flask import Flask 
+from flask import Flask
 import pytz
 
 app = Flask(__name__)

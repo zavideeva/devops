@@ -19,4 +19,3 @@ def test_current_time_in_msk(client):
     MSK = pytz.timezone('Europe/Moscow')
     current_time = datetime.now(MSK).strftime('%H:%M:%S')
     assert r.data.decode('utf-8') == current_time
-    
