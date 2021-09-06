@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  web:
+    image: zavideevaa/app_python:latest
+    ports:
+      - "80:8000"

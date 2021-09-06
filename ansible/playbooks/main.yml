@@ -6,3 +6,9 @@
       - ubuntu
   roles:
     - docker
+
+- name: docker-compose
+  hosts: all
+  become: true
+  roles:
+    - compose

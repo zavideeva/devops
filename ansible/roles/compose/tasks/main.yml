@@ -1,0 +1,19 @@
+- name: Create dir
+  become: true
+  file:
+    dest: /opt/app
+    state: directory
+    mode: 0755
+    recurse: true
+
+- name: Copy docker-compose file
+  become: true
+  copy:
+    src: ../../../app_python/docker-compose.prod.yml
+    dest: /opt/app/docker-compose.yml
+    mode: 0755
+
+- name: Run docker-compose
+  community.docker.docker_compose:
+    project_src: /opt/app
+    restarted: true
