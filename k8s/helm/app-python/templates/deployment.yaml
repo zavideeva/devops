@@ -48,11 +48,20 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-              - name: MY_PASSWORD
-                valueFrom:
-                  secretKeyRef:
-                    name: credentials
-                    key: password
+            - name: MY_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: credentials
+                  key: password
+          volumeMounts:
+          - name: app-volume
+            mountPath: /config.json
+            subPath: config.json
+      volumes:
+      - name: app-volume
+        configMap:
+          name: app-config
+
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

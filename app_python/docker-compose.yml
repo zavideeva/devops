@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:8000"
     volumes: 
-      - .:/code
+      - data:/code/data
     logging:
       driver: "json-file"
       options:
@@ -19,3 +19,6 @@ services:
           memory: 200M
         reservations:
           memory: 100M
+
+volumes:
+  data:

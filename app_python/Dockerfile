@@ -5,8 +5,14 @@ RUN adduser -D myuser && chown -R myuser /code
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+COPY /src .
+
+RUN mkdir /data
+
+RUN chown myuser /data
 
 USER myuser
 
-ENTRYPOINT [ "gunicorn", "-b 0.0.0.0:8000", "main:app" ]
+ENV PYTHONUNBUFFERED=TRUE
+
+ENTRYPOINT [ "gunicorn", "-b 0.0.0.0:8000", "main:app"]

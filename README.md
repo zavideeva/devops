@@ -40,6 +40,8 @@ git clone https://github.com/zavideeva/devops.git
 docker-compose up --build
 ```
 3. Open link: http://0.0.0.0:8000 and see an applictaion in use
+
+4. If you want to know time of previous visits, you can view it on page http://0.0.0.0:8000/visits  
 ### Running image from dockerhub
 ``` 
 docker run -p 8000:8000 zavideevaa/app_python
