@@ -61,10 +61,25 @@ spec:
             subPath: config.json
           - name: {{ include "app-python.fullname" . }}-data
             mountPath: /app/data
+          - name: working-dir
+            mountPath: "/working-dir"
+      initContainers:
+        - name: install
+          image: busybox
+          command:
+          - wget
+          - "-O"
+          - "/working-dir/index.html"
+          - https://www.random.org/dice/
+          volumeMounts:
+            - name: working-dir
+              mountPath: "/working-dir"
       volumes:
       - name: app-volume
         configMap:
           name: app-config
+      - name: working-dir
+        emptyDir: {}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
