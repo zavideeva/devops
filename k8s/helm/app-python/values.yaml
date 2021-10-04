@@ -5,6 +5,8 @@ image:
   pullPolicy: IfNotPresent
   tag: "latest"
 
+podManagementPolicy: "Parallel"
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

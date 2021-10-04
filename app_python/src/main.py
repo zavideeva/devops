@@ -17,10 +17,11 @@ def create_visits():
     if not os.path.exists(FILE):
         os.mknod(FILE)
 
+create_visits()
+
 @app.route("/")
 def time_in_msk():
     """Show current time in Moskow"""
-    create_visits()
     str_time = datetime.now(MSK).strftime('%H:%M:%S')
     with open(FILE, "a+") as f:
       f.write(str_time + "\n")
